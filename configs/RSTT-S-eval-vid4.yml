@@ -1,0 +1,26 @@
+# General settings
+name: RSTT-S
+use_tb_logger: false #true
+model: RSTT
+scale: 4
+gpu_ids: [0]
+
+# Dataset
+dataset:
+  name: Vid4
+  dataset_root: ./datasets/Vid4
+  num_out_frames: 7
+
+# Network structures
+network:
+  embed_dim: 96
+  depths: [4, 4, 4, 4, 4, 4, 4, 4]
+  num_heads: [2, 4, 8, 16, 16, 8, 4, 2] 
+  window_sizes: [[4,4], [4,4], [4,4], [4,4], [4,4], [4,4], [4,4], [4,4]]
+  back_RBs: 0
+
+# Path
+path:
+  pretrain_model: ./checkpoints/RSTT-S/f96d4w4h24816Ushape0res_1690000.pth
+  strict_load: true 
+  output_dir: ./results
