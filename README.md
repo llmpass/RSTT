@@ -19,10 +19,14 @@ $ pip install -r requirements.txt
 ```
 
 ## Dataset Preparation
+Download vimeo90k Septuplet dataset for training and evaluation:
+http://toflow.csail.mit.edu/index.html#septuplet
+Choose "The original training + test set (82GB)", then 
 ```
 python ./datasets/prepare_vimeo.py --path /path/to/vimeo/
 ```
-
+Download Vid4 dataset for evaluation:
+https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution/blob/master/Doc/Dataset.md
 ## Train
 ```
 python train.py ./configs/RSTT-S.yml
