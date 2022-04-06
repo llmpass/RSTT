@@ -23,7 +23,11 @@ Download vimeo90k Septuplet dataset for training and evaluation:
 
 http://toflow.csail.mit.edu/index.html#septuplet
 
-Choose "The original training + test set (82GB)", then 
+Choose "The original training + test set (82GB)".
+
+```
+cp datasets/vimeo_septuplet/*.txt /path/to/vimeo/
+```
 ```
 python ./datasets/prepare_vimeo.py --path /path/to/vimeo/
 ```
