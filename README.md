@@ -34,7 +34,7 @@ python ./datasets/prepare_vimeo.py --path /path/to/vimeo/
 
 Download Vid4 dataset for evaluation:
 
-https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution/blob/master/Doc/Dataset.md
+https://drive.google.com/drive/folders/10-gUO6zBeOpWEamrWKCtSkkUFukB9W5m
 
 ## Train
 ```
