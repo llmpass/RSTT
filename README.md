@@ -12,6 +12,14 @@ IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**), 2022
 Space-time video super-resolution (STVSR) is the task of interpolating videos with both Low Frame Rate (LFR) and Low Resolution (LR) to produce a High-Frame-Rate (HFR) and also High-Resolution (HR) counterpart. The existing methods based on Convolutional Neural Network (CNN) succeed in achieving visually satisfied results while suffer from slow inference speed due to their heavy architectures. 
 We propose to resolve this issue by using a spatial-temporal transformer that naturally incorporates the spatial and temporal super resolution modules into a single model. Unlike CNN-based methods, we do not explicitly use separated building blocks for temporal interpolations and spatial super-resolutions; instead, we only use a single end-to-end transformer architecture. Specifically, a reusable dictionary is built by encoders based on the input LFR and LR frames, which is then utilized in the decoder part to synthesize the HFR and HR frames.
 
+## Environment
+Cuda   11.4
+
+Python 3.8.11
+
+torch  1.9.0
+
+
 ## Installation
 ```
 $ git clone https://github.com/llmpass/RSTT.git
@@ -37,16 +45,19 @@ Download Vid4 dataset for evaluation:
 https://drive.google.com/drive/folders/10-gUO6zBeOpWEamrWKCtSkkUFukB9W5m
 
 ## Train
+Make sure writing a yml file with settings pointing to correct paths, for example:
 ```
 python train.py --config ./configs/RSTT-S.yml
 ```
 
 ## Evaluation
 ### Vid4:
+Make sure writing a yml file with settings pointing to correct paths, for example:
 ```
 python eval_vid4.py --config ./configs/RSTT-S-eval-vid4.yml
 ```
 ### Vimeo90k:
+Make sure writing a yml file with settings pointing to correct paths, for example:
 ```
 python eval_vimeo90k.py --config ./configs/RSTT-S-eval-vimeo90k.yml
 ```
