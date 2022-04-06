@@ -51,5 +51,25 @@ python eval_vid4.py --config ./configs/RSTT-S-eval-vid4.yml
 python eval_vimeo90k.py --config ./configs/RSTT-S-eval-vimeo90k.yml
 ```
 
+## Citation
+~~~
+@article{geng2022rstt,
+  title={RSTT: Real-time Spatial Temporal Transformer for Space-Time Video Super-Resolution},
+  author={Zhicheng Geng and Luming Liang and Tianyu Ding and Ilya Zharkov},
+  journal={arXiv preprint arXiv:2203.14186},
+  year={2022}
+}
+~~~
+or
+~~~
+@inproceedings{geng2022rstt,
+  title={RSTT: Real-time Spatial Temporal Transformer for Space-Time Video Super-Resolution},
+  author={Zhicheng Geng and Luming Liang and Tianyu Ding and Ilya Zharkov},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={?--?},
+  year={2022}
+}
+~~~
+
 ## Acknowledgment
 Our code is built on [Zooming-Slow-Mo](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020), [EDVR](https://github.com/xinntao/EDVR), [UFormer](https://github.com/ZhendongWang6/Uformer), and [Swin-Transformer](https://github.com/microsoft/Swin-Transformer). We thank the authors for sharing their codes.
