@@ -38,7 +38,7 @@ https://drive.google.com/drive/folders/10-gUO6zBeOpWEamrWKCtSkkUFukB9W5m
 
 ## Train
 ```
-python train.py ./configs/RSTT-S.yml
+python train.py --config ./configs/RSTT-S.yml
 ```
 
 ## Evaluation
