@@ -5,7 +5,6 @@ numpy==1.20.3
 opencv_python==4.5.3.56
 PyYAML==6.0
 scikit_image==0.18.3
-skimage==0.0
 tensorboardX==2.5
 timm==0.4.12
 torch==1.9.0
