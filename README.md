@@ -16,6 +16,7 @@ IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**), 2022
 Space-time video super-resolution (STVSR) is the task of interpolating videos with both Low Frame Rate (LFR) and Low Resolution (LR) to produce a High-Frame-Rate (HFR) and also High-Resolution (HR) counterpart. The existing methods based on Convolutional Neural Network (CNN) succeed in achieving visually satisfied results while suffer from slow inference speed due to their heavy architectures. 
 We propose to resolve this issue by using a spatial-temporal transformer that naturally incorporates the spatial and temporal super resolution modules into a single model. Unlike CNN-based methods, we do not explicitly use separated building blocks for temporal interpolations and spatial super-resolutions; instead, we only use a single end-to-end transformer architecture. Specifically, a reusable dictionary is built by encoders based on the input LFR and LR frames, which is then utilized in the decoder part to synthesize the HFR and HR frames.
 
+## Performance
 Below is performance of RSTT on Vid4 dataset using small (S), medium (M) and large (L) architectures compared to other baseline models. We plot FPS versus PSNR. Note that 24 FPS is the standard cinematic frame rate. We also plot the number of parameters (in millions) versus PSNR. 
 
 <p align="center">
@@ -23,9 +24,8 @@ Below is performance of RSTT on Vid4 dataset using small (S), medium (M) and lar
   <img src="figs/params_psnr.png"  | width=300/>
 </p>
 
-The architecture of the proposed RSTT: the features extracted from four input LFR and LR frames are processed by encoders
-Ek, k = 0, 1, 2, 3 to build dictionaries that will be used as inputs for the decoders Dk, k = 0, 1, 2, 3. The query builder generates a vector
-of queries Q which are then used to synthesize a sequence of seven consecutive HFR and HR frames
+## Architecture Overview 
+The features extracted from four input LFR and LR frames are processed by encoders Ek, k = 0, 1, 2, 3 to build dictionaries that will be used as inputs for the decoders Dk, k = 0, 1, 2, 3. The query builder generates a vector of queries Q which are then used to synthesize a sequence of seven consecutive HFR and HR frames.
 
 <p align="center">
   <img src="figs/rstt_arch_td.png" />
