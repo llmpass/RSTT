@@ -1,5 +1,7 @@
 # RSTT (Real-time Spatial Temporal Transformer)
-https://paperswithcode.com/sota/video-frame-interpolation-on-vid4-4x
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rstt-real-time-spatial-temporal-transformer/video-frame-interpolation-on-vid4-4x)](https://paperswithcode.com/sota/video-frame-interpolation-on-vid4-4x?p=rstt-real-time-spatial-temporal-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rstt-real-time-spatial-temporal-transformer/space-time-video-super-resolution-on-vimeo90k)](https://paperswithcode.com/sota/space-time-video-super-resolution-on-vimeo90k?p=rstt-real-time-spatial-temporal-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rstt-real-time-spatial-temporal-transformer/space-time-video-super-resolution-on-vimeo90k-1)](https://paperswithcode.com/sota/space-time-video-super-resolution-on-vimeo90k-1?p=rstt-real-time-spatial-temporal-transformer)
 
 This is the official pytorch implementation of the paper "RSTT: Real-time Spatial Temporal Transformer for Space-Time Video Super-Resolution"
 
