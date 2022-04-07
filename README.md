@@ -19,8 +19,8 @@ We propose to resolve this issue by using a spatial-temporal transformer that na
 Below is performance of RSTT on Vid4 dataset using small (S), medium (M) and large (L) architectures compared to other baseline models. We plot FPS versus PSNR. Note that 24 FPS is the standard cinematic frame rate. We also plot the number of parameters (in millions) versus PSNR. 
 
 <p align="center">
-  <img src="figs/fps_psnr.png" />
-  <img src="figs/params_psnr.png" />
+  <img src="figs/fps_psnr.png"  | width=100/>
+  <img src="figs/params_psnr.png"  | width=100/>
 </p>
 
 The architecture of the proposed RSTT: the features extracted from four input LFR and LR frames are processed by encoders
