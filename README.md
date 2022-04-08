@@ -109,3 +109,6 @@ or
 
 ## Acknowledgment
 Our code is built on [Zooming-Slow-Mo](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020), [EDVR](https://github.com/xinntao/EDVR), [UFormer](https://github.com/ZhendongWang6/Uformer), and [Swin-Transformer](https://github.com/microsoft/Swin-Transformer). We thank the authors for sharing their codes.
+
+## License
+The code is released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License for NonCommercial use only. Any commercial use should get formal permission first.
