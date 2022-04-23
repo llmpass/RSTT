@@ -165,12 +165,12 @@ class WindowAttention3D(nn.Module):
         )  # 2*D-1 * 2*Wh-1 * 2*Ww-1, nH
 
         # Get pair-wise relative position index for each token inside the window
-        corrds_d_q = torch.arange(self.num_frames_q)
-        corrds_d_kv = torch.arange(0, self.num_frames_q, int((self.num_frames_q + 1) // self.num_frames_kv))
+        coords_d_q = torch.arange(self.num_frames_q)
+        coords_d_kv = torch.arange(0, self.num_frames_q, int((self.num_frames_q + 1) // self.num_frames_kv))
         coords_h = torch.arange(self.window_size[0])
         coords_w = torch.arange(self.window_size[1])
-        coords_q = torch.stack(torch.meshgrid([corrds_d_q, coords_h, coords_w]))  # 3, D1, Wh, Ww
-        coords_kv = torch.stack(torch.meshgrid([corrds_d_kv, coords_h, coords_w]))  # 3, D2, Wh, Ww
+        coords_q = torch.stack(torch.meshgrid([coords_d_q, coords_h, coords_w]))  # 3, D1, Wh, Ww
+        coords_kv = torch.stack(torch.meshgrid([coords_d_kv, coords_h, coords_w]))  # 3, D2, Wh, Ww
         coords_q_flatten = torch.flatten(coords_q, 1)  # 3, D1*Wh*Ww
         coords_kv_flatten = torch.flatten(coords_kv, 1)  # 3, D2*Wh*Ww
         relative_coords = coords_q_flatten[:, :, None] - coords_kv_flatten[:, None, :]  # 3, D1*Wh*Ww, D2*Wh*Ww
