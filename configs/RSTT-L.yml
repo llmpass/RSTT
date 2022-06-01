@@ -1,5 +1,5 @@
 # General settings
-name: RSTT-S
+name: RSTT-L
 use_tb_logger: false #true
 model: RSTT
 scale: 4
