@@ -1,0 +1,59 @@
+# General settings
+name: RSTT-S
+use_tb_logger: false #true
+model: RSTT
+scale: 4
+gpu_ids: [0]
+
+# Datasets
+dataset:
+  name: Vimeo90k_septuplet
+  random_reverse: true #false
+  dataroot_HR: ./datasets/vimeo_septuplet/vimeo_HR.lmdb
+  dataroot_LR: ./datasets/vimeo_septuplet/vimeo_LR.lmdb
+  cache_keys: ./datasets/vimeo_septuplet/Vimeo_keys.pkl 
+
+  num_frames: 7
+  use_shuffle: true
+  n_workers: 4  # per GPU
+  batch_size: 7
+  crop_size: 256
+  image_shape: [3, 256, 448]
+  use_flip: true
+  use_rot: true
+
+# Network structures
+network:
+  embed_dim: 96
+  depths: [6, 6, 6, 6, 6, 6, 6, 6]
+  num_heads: [2, 4, 8, 16, 16, 8, 4, 2] 
+  window_sizes: [[4,4], [4,4], [4,4], [4,4], [4,4], [4,4], [4,4], [4,4]]
+  back_RBs: 0
+
+# Path
+path:
+  pretrain_model: ~ 
+  strict_load: true # false
+  resume_state: ~ 
+
+# Training settings
+train:
+  lr: 0.0002
+  lr_scheme: CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 2000000
+  warmup_iter: -1 # 5000  # -1: no warm up
+  T_period: [400000, 800000, 1200000, 1600000]
+  restarts: [400000, 800000, 1200000]
+  restart_weights: [0.5, 0.5, 0.5]
+  eta_min: !!float 1e-7
+
+  val_freq: !!float 5e3
+
+  manual_seed: 0
+
+# Logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
