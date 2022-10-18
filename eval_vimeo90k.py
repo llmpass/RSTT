@@ -37,7 +37,17 @@ def main():
     model.eval()
     model = model.to(device)
 
+    # 왜 LR_paths가 비어있지?? => 밑 경로가 잘못돼있어서 그런거였음.
+    config['dataset']['dataset_root'] = "/home/gyubin/RSTT/to/vimeo/sequences_LR" #그래서 수정해줌
+
     LR_paths = sorted(glob.glob(os.path.join(config['dataset']['dataset_root'], config['dataset']['mode']+'_test', '*')))
+    print("LR_paths : ", LR_paths)
+    print("config['dataset']['dataset_root'] : ", config['dataset']['dataset_root'])
+    print("config['dataset']['mode'] : ", config['dataset']['mode'])
+
+    print("config['dataset']['dataset_root'] : ", config['dataset']['dataset_root'])
+    
+
 
     PSNR = []
     PSNR_Y = []
@@ -47,6 +57,9 @@ def main():
     for LR_path in LR_paths:
         sub_save_path = os.path.join(save_path, LR_path.split('/')[-1])
         mkdirs(sub_save_path)
+        print("sub_save_path : ", sub_save_path)
+        
+        #여기서부터 vid4랑 코드 다 다름
 
         sub_LR_paths = sorted(glob.glob(os.path.join(LR_path, '*')))
 

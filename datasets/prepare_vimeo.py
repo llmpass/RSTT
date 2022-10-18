@@ -1,4 +1,7 @@
 import os
+os.environ["MKL_NUM_THREADS"] = "2" # export MKL_NUM_THREADS=2
+os.environ["NUMEXPR_NUM_THREADS"] = "2" # export NUMEXPR_NUM_THREADS=2
+os.environ["OMP_NUM_THREADS"] = "2" # export OMP_NUM_THREADS=2
 import sys
 import shutil
 import argparse
@@ -18,12 +21,12 @@ if __name__ == "__main__":
     print(path)
 
     # Separate datasets
-    data_path = os.path.join(path, 'sequences')
-    for mode in ['train', 'fast_test', 'medium_test', 'slow_test']:
-        print('Separate {} dataset'.format(mode))
-        save_path = os.path.join(data_path, mode)
-        txt_file = os.path.join(path, 'sep_{}list.txt'.format(mode))
-        sep_vimeo(data_path, save_path, txt_file)
+    # data_path = os.path.join(path, 'sequences')
+    # for mode in ['train', 'fast_test', 'medium_test', 'slow_test']:
+    #     print('Separate {} dataset'.format(mode))
+    #     save_path = os.path.join(data_path, mode)
+    #     txt_file = os.path.join(path, 'sep_{}list.txt'.format(mode))
+    #     sep_vimeo(data_path, save_path, txt_file)
 
     # Genereate LR images
     for mode in ['train', 'fast_test', 'medium_test', 'slow_test']:
