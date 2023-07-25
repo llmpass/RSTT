@@ -46,7 +46,7 @@ $ git clone https://github.com/llmpass/RSTT.git
 $ pip install -r requirements.txt
 ```
 
-Note that the torch version must be compatible to the cuda version, not necessary to by 1.9.0 here. For example, with cuda version 11.X, torch 1.9.0 is too old to use, may cause problems like
+Note that the torch version must be compatible to the cuda version, not necessary to be 1.9.0 here. For example, with cuda version 11.X, torch 1.9.0 is too old to use, may cause problems like
 ```
 Cuda error: no kernel image is available for execution on the device 
 ```
