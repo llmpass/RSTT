@@ -38,7 +38,7 @@ def main():
     model.eval()
     model = model.to(device)
 
-    loss_fn_alex = lpips.LPIPS(net='alex') 
+    loss_fn_alex = lpips.LPIPS(net='alex') #vimeo는 이 줄이 없는데 얘는 있네..??
     LR_paths = sorted(glob.glob(os.path.join(config['dataset']['dataset_root'], 'BIx4', '*')))
 
     PSNR = []
@@ -51,7 +51,7 @@ def main():
         sub_save_path = os.path.join(save_path, LR_path.split('/')[-1])
         mkdirs(sub_save_path)
 
-        tested_index = []
+        tested_index = [] #그리고 여기는 sub_LR_path가 없네..? 여기부터는 코드가 쭉 다른 듯...?
 
         GT_path = LR_path.replace('BIx4', 'GT')
         imgs_LR = read_seq_images(LR_path)
